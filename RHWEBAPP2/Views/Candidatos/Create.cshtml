@@ -1,0 +1,73 @@
+﻿@model RHWEBAPP2.Models.Candidatos
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Candidatos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cedula" class="control-label"></label>
+                <input asp-for="Cedula" class="form-control" />
+                <span asp-validation-for="Cedula" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Puesto_Al_Que_Aspira" class="control-label"></label>
+                <input asp-for="Puesto_Al_Que_Aspira" class="form-control" />
+                <span asp-validation-for="Puesto_Al_Que_Aspira" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Departamento" class="control-label"></label>
+                <input asp-for="Departamento" class="form-control" />
+                <span asp-validation-for="Departamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salario_Al_Que_Aspira" class="control-label"></label>
+                <input asp-for="Salario_Al_Que_Aspira" class="form-control" />
+                <span asp-validation-for="Salario_Al_Que_Aspira" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Principales_Competencias" class="control-label"></label>
+                <input asp-for="Principales_Competencias" class="form-control" />
+                <span asp-validation-for="Principales_Competencias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Principales_Capacitaciones" class="control-label"></label>
+                <input asp-for="Principales_Capacitaciones" class="form-control" />
+                <span asp-validation-for="Principales_Capacitaciones" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Experiencia_Laboral" class="control-label"></label>
+                <input asp-for="Experiencia_Laboral" class="form-control" />
+                <span asp-validation-for="Experiencia_Laboral" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recomendado_Por" class="control-label"></label>
+                <input asp-for="Recomendado_Por" class="form-control" />
+                <span asp-validation-for="Recomendado_Por" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<RHWEBAPP2.Models.Candidatos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puesto_Al_Que_Aspira)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario_Al_Que_Aspira)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Principales_Competencias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Principales_Capacitaciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Experiencia_Laboral)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recomendado_Por)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Puesto_Al_Que_Aspira)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario_Al_Que_Aspira)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Principales_Competencias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Principales_Capacitaciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experiencia_Laboral)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Recomendado_Por)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
